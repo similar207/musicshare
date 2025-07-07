@@ -1,97 +1,46 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# 음악 공유 플랫폼
 
-# Getting Started
+기기 1개에서 다수가 플레이리스트를 추가할 수 있는 음악 플레이리스트 공유 앱입니다.
 
-> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
+## 핵심 기능 구성
+1. 💬 실시간 플레이리스트 제안
+사용자(고객)가 자신의 플레이리스트를 등록하거나 노래를 큐에 추가
 
-## Step 1: Start Metro
+추천 시 간단한 코멘트도 함께 입력 가능 ("이 시간엔 이 노래 어때요?" 등)
 
-First, you will need to run **Metro**, the JavaScript build tool for React Native.
+2. 📻 공용 플레이 큐 (실시간 DJ 기능)
+카페나 공간 관리자 계정이 음악을 재생
 
-To start the Metro dev server, run the following command from the root of your React Native project:
+고객의 추천 리스트 중에서 선택하거나 자동 큐 순서에 따라 진행
 
-```sh
-# Using npm
-npm start
+현재 재생 중인 곡/다음 곡 표시
 
-# OR using Yarn
-yarn start
-```
+3. 👍 투표 기능
+대기열에 있는 노래에 대해 찬반 투표 가능
 
-## Step 2: Build and run your app
+좋아요가 많을수록 먼저 재생되도록 우선순위 반영
 
-With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
+4. 📱 사용자 참여
+손님이 모바일 앱이나 웹앱으로 접속해 노래 추가/투표 가능
 
-### Android
+QR 코드로 카페에서 바로 접속 유도
 
-```sh
-# Using npm
-npm run android
+5. 👀 관리자 모드
+카페 직원은 추천곡 중 부적절한 노래 필터링 가능
 
-# OR using Yarn
-yarn android
-```
+큐 순서 조정 / 재생 중단 / 즉시 다음 곡 넘김 가능
 
-### iOS
+6. 🗂 추천 리스트 아카이브
+사용자들이 만든 플레이리스트를 저장하고 다른 사람도 열람 가능
 
-For iOS, remember to install CocoaPods dependencies (this only needs to be run on first clone or after updating native deps).
+인기 플레이리스트 선정 기능 (주간 Top 10 등)
 
-The first time you create a new project, run the Ruby bundler to install CocoaPods itself:
-
-```sh
-bundle install
-```
-
-Then, and every time you update your native dependencies, run:
-
-```sh
-bundle exec pod install
-```
-
-For more information, please visit [CocoaPods Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).
-
-```sh
-# Using npm
-npm run ios
-
-# OR using Yarn
-yarn ios
-```
-
-If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, or your connected device.
-
-This is one way to run your app — you can also build it directly from Android Studio or Xcode.
-
-## Step 3: Modify your app
-
-Now that you have successfully run the app, let's make changes!
-
-Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
-
-When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
-
-- **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
-- **iOS**: Press <kbd>R</kbd> in iOS Simulator.
-
-## Congratulations! :tada:
-
-You've successfully run and modified your React Native App. :partying_face:
-
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+---
+기술스택 
+앱 프론트엔드	React Native (iOS, Android 동시 지원)
+실시간 기능	Firebase Realtime Database or Socket.IO
+백엔드	Node.js (Express), Firebase Functions, 또는 Supabase
+데이터 저장	Firebase / PostgreSQL (Supabase)
+음악 재생	Spotify API, Apple Music API, 또는 로컬 스트리밍 서버
+인증	Firebase Auth (SNS 간편 로그인)
+관리자 웹페이지	React + Admin UI 라이브러리 (예: Ant Design, ShadCN)
