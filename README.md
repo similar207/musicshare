@@ -37,10 +37,10 @@ QR 코드로 카페에서 바로 접속 유도
 
 ---
 기술스택 
-앱 프론트엔드	React Native (iOS, Android 동시 지원)
-실시간 기능	Firebase Realtime Database or Socket.IO
-백엔드	Node.js (Express), Firebase Functions, 또는 Supabase
-데이터 저장	Firebase / PostgreSQL (Supabase)
-음악 재생	Spotify API, Apple Music API, 또는 로컬 스트리밍 서버
-인증	Firebase Auth (SNS 간편 로그인)
-관리자 웹페이지	React + Admin UI 라이브러리 (예: Ant Design, ShadCN)
+
+<img src="https://img.shields.io/badge/react-61DAFB?style=for-the-badge&logo=react&logoColor=black">
+<img src="https://img.shields.io/badge/firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=white">
+<img src="https://img.shields.io/badge/node.js-339933?style=for-the-badge&logo=Node.js&logoColor=white">
+<img src="https://img.shields.io/badge/github-181717?style=for-the-badge&logo=github&logoColor=white">
+<img src="https://img.shields.io/badge/gradle-02303A?style=for-the-badge&logo=gradle&logoColor=white">
+<img src="https://img.shields.io/badge/socket.io-010101?style=for-the-badge&logo=socket.io&logoColor=white">
